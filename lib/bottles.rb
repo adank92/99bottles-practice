@@ -23,11 +23,7 @@ class Bottles
   end
 
   def action(number)
-    if number == 0
-      'Go to the store and buy some more'
-    else
-      "Take #{pronoun(number)} down and pass it around"
-    end
+    BottleNumber.new(number).action(number)
   end
 
   def pronoun(number)
